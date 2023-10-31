@@ -56,7 +56,7 @@ while True:
                 "Pragma": "no-cache",
                 "Connection": "Keep-Alive",
                 "Referer": f"{res}",
-                "Cache-Control": "no-store, no-cache"
+                "Cache-Control": "no-store, no-cache",
                 "Host": "192.167.1.5"
             }
             response = requests.post(url, headers=headers)
