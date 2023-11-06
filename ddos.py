@@ -26,7 +26,7 @@ print("""
 ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝    ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝     ╚══════╝╚═╝   
 """)    
 print(blue + f"\t\tMade By : MrSanZz")
-print(blue + f"\t\tTeam : EIHT")
+print(blue + f"\t\tTeam : JogjaXploit")
 print(blue + f"\t\tDon't Recode This Skid!!")
 print(blue + f"\tEnjoy!")
 print('\033[1;3m')
