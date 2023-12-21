@@ -66,7 +66,7 @@ while True:
                 "Connection": "Keep-Alive",
                 "Referer": f"{res}",
                 "Cache-Control": "no-store, no-cache",
-                "Host": f"{fip}"
+                "Host": f"{fip}",
                 "GET / HTTP/1.1\r\n"
             }
             response = requests.post(url, headers=headers)
